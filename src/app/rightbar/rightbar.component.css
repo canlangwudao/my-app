@@ -1,0 +1,189 @@
+/* 右侧导航栏 */
+.consultation-item{
+  position: fixed;
+  right: 0;
+  top: 40%;
+  z-index: 100;
+}
+.consultion-text{
+  width: 50px;
+  height: 58px;
+  background-color: #c2bfbe;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+.consultion-text:hover,
+.consultion-top:hover{
+  background-color: #ff3700;
+}
+.consultation-item .consultion-text:nth-child(1):hover .consultion-content{
+  display: block;
+}
+.consultation-item .consultion-text:nth-child(2):hover .consultion-content{
+  display: block;
+}
+.consultation-item .consultion-text:nth-child(3):hover .consultion-content{
+  display: block;
+}
+.consultion-text i{
+  font-size: 20px;
+  line-height: 36px;
+}
+.consultion-top{
+  margin-top: 19px;
+  width: 50px;
+  height: 50px;
+  background-color: #c2bfbe;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+.consultion-top i{
+  font-size: 13px;
+  line-height: 30px;
+}
+.consultation-item .consultion-text .consultion-content p a{
+  font-size: 12px;
+  color: #fff;
+}
+.consultation-item .consultion-text .consultion-content p a:hover{
+  color: #ff3600;
+}
+.consultation-item .consultion-text .consultion-content p a span{
+  display: inline-block;
+  width: 56px;
+  text-align: left;
+}
+.consultation-item .consultion-text:nth-child(1) .consultion-content{
+  display: none;
+  width: 158px;
+  height: 108px;
+  background-color: #4d4b4b;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  left: -156px;
+  top: -24px;
+}
+.consultation-item .consultion-text:nth-child(1) .consultion-content::after{
+  position: absolute;
+  content: '';
+  right: -5px;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid #4d4b4b;
+}
+.consultation-item .consultion-text:nth-child(1) .consultion-content p{
+  line-height: 14px;
+  height: 14px;
+}
+.consultation-item .consultion-text:nth-child(1) .consultion-content p:nth-child(1){
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+.consultation-item .consultion-text:nth-child(1) .consultion-content p:nth-child(2){
+  margin-bottom: 16px;
+}
+.consultation-item .consultion-text:nth-child(1) .consultion-content p i{
+  font-size: 14px;
+  margin-right: 7px;
+}
+.consultation-item .consultion-text:nth-child(2) .consultion-content{
+  display: none;
+  width: 156px;
+  height: 159px;
+  background-color: #4d4b4b;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  left: -156px;
+  top: -48px;
+}
+.consultation-item .consultion-text:nth-child(2) .consultion-content::after{
+  position: absolute;
+  content: '';
+  right: -5px;
+  top: 72px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid #4d4b4b;
+}
+.consultation-item .consultion-text:nth-child(2) .consultion-content p:nth-child(1){
+  font-size: 12px;
+  color: #fff;
+  margin: 20px 0 10px 16px;
+  line-height: 12px;
+  text-align: left;
+}
+.consultation-item .consultion-text:nth-child(2) .consultion-content p:nth-child(2){
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 22px 16px;
+  line-height: 18px;
+  text-align: left;
+}
+.consultation-item .consultion-text:nth-child(2) .consultion-content p:nth-child(3){
+  font-size: 12px;
+  color: #fff;
+  margin: 0 0 10px 16px;
+  line-height: 12px;
+  text-align: left;
+}
+.consultation-item .consultion-text:nth-child(2) .consultion-content p:nth-child(4){
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 5px 16px;
+  line-height: 18px;
+  text-align: left;
+}
+.consultation-item .consultion-text:nth-child(2) .consultion-content p:nth-child(5){
+  font-size: 12px;
+  color: #fff;
+  margin: 0 0 0 16px;
+  line-height: 12px;
+  text-align: left;
+}
+.consultation-item .consultion-text:nth-child(3) .consultion-content{
+  display: none;
+  width: 132px;
+  height: 132px;
+  background-color: #4d4b4b;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  left: -156px;
+  top: -48px;
+}
+.consultation-item .consultion-text:nth-child(3) .consultion-content::after{
+  position: absolute;
+  content: '';
+  right: -5px;
+  top: 72px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid #4d4b4b;
+}
+.consultation-item .consultion-text:nth-child(3) .consultion-content p{
+  margin: 14px 0 10px;
+  width: 100%;
+  text-align: center;
+  line-height: 12px;
+}
+.consultation-item .consultion-text:nth-child(3) .consultion-content img{
+  margin: 12px auto;
+}
