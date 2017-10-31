@@ -9,6 +9,15 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { StarsComponent } from './stars/stars.component';
 import { RightbarComponent } from './rightbar/rightbar.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { HomeComponent } from './home/home.component';
+import {RouterModule, Routes} from '@angular/router';
+
+const routeConfig: Routes = [
+  { path: '' , component: HomeComponent},
+  { path: 'product/:title', component: ProductDetailComponent},
+];
+
 
 @NgModule({
   declarations: [
@@ -19,10 +28,13 @@ import { RightbarComponent } from './rightbar/rightbar.component';
     CarouselComponent,
     ProductComponent,
     StarsComponent,
-    RightbarComponent
+    RightbarComponent,
+    ProductDetailComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routeConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]
