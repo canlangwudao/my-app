@@ -1,4 +1,19 @@
-<div>
+<div class="thumbnail">
   <img src="http://placehold.it/900x300" alt="" />
-  <p>{{productTitle}}</p>
+  <div>
+    <h4 class="pull-right">{{product.price}}元</h4>
+    <h4>{{product.title}}</h4>
+    <p>{{product.desc}}</p>
+  </div>
+  <p class="pull-right" >{{comments.length}}</p>
+  <app-stars [rating]="product.rating"></app-stars>
+</div>
+<div class="well">
+<div *ngFor="let comment of comments,index as i" >
+  <p class="pull-right">{{comment.timestamp}}</p>
+  <p>{{comment.user}}</p>
+  <p>{{comment.conent}}</p>
+  <app-stars [rating]="comment.rating"></app-stars>
+  <hr *ngIf="i != comments.length - 1 " style="border-top:1px dotted #c2bfbe ;">
+</div>
 </div>

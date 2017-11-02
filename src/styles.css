@@ -13,8 +13,8 @@ body {
 }
 .loading_indicator {
   position:absolute;
-  width:100px;
-  height:100px;
+  width:45px;
+  height:45px;
   margin: auto;
   top:0;
   bottom:0;
