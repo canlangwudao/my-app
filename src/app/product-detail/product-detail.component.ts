@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Product, ProductService} from '../shared/product.service';
+import {Comment} from '../shared/product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,7 +11,11 @@ import {Product, ProductService} from '../shared/product.service';
 export class ProductDetailComponent implements OnInit {
 
   private product: Product;
-  private comments: Component[];
+  private comments: Comment[];
+  private newRating = 5;
+  private newComment = '';
+  private tempComment: Comment;
+  private pullStarShow = false;
   constructor(private routerInfo: ActivatedRoute, private  productService: ProductService) { }
 
   ngOnInit() {
@@ -19,4 +24,15 @@ export class ProductDetailComponent implements OnInit {
     this.comments = this.productService.getComment(productId);
   }
 
+  pullStar() {
+    this.tempComment =
+      new Comment( this.comments.length + 1, this.product.id , new Date().toDateString(), '张', this.newRating, this.newComment);
+    this.comments.push(this.tempComment);
+    const sum = this.comments.reduce(( sum, comment) => sum + comment.rating , 0 );
+    this.product.rating = sum / this.comments.length;
+    this.tempComment = null;
+    this.newRating = 5;
+    this.newComment = '';
+    this.pullStarShow = false;
+  }
 }

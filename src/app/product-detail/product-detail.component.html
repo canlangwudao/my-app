@@ -9,11 +9,19 @@
   <app-stars [rating]="product.rating"></app-stars>
 </div>
 <div class="well">
-<div *ngFor="let comment of comments,index as i" >
-  <p class="pull-right">{{comment.timestamp}}</p>
-  <p>{{comment.user}}</p>
-  <p>{{comment.conent}}</p>
-  <app-stars [rating]="comment.rating"></app-stars>
-  <hr *ngIf="i != comments.length - 1 " style="border-top:1px dotted #c2bfbe ;">
-</div>
+  <button (click)="pullStarShow = !pullStarShow" class="btn btn-info">发表评论</button>
+  <!--<div *ngIf="pullStarShow">-->
+  <div [hidden]="!pullStarShow">
+    <app-stars [readonly]="false" [(rating)]="newRating"></app-stars>
+    <textarea [(ngModel)]="newComment"></textarea><br>
+    <button (click)="pullStar()" >提交</button>
+  </div>
+  <hr>
+  <div *ngFor="let comment of comments,index as i" >
+    <p class="pull-right">{{comment.timestamp}}</p>
+    <p>{{comment.user}}</p>
+    <p>{{comment.conent}}</p>
+    <app-stars [rating]="comment.rating"></app-stars>
+    <hr *ngIf="i != comments.length - 1 " style="border-top:1px dotted #c2bfbe ;">
+  </div>
 </div>
